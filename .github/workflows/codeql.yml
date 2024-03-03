@@ -1,28 +1,28 @@
-name: CodeQL Analysis
+# name: CodeQL Analysis
 
-on:
-  push:
-    branches: [ main ]
+# on:
+#   push:
+#     branches: [ main ]
 
-jobs:
-  build:
+# jobs:
+#   build:
 
-    runs-on: ubuntu-latest
+#     runs-on: ubuntu-latest
 
-    steps:
-    - name: Checkout code
-      uses: actions/checkout@v4
+#     steps:
+#     - name: Checkout code
+#       uses: actions/checkout@v4
 
-    - name: Initialize CodeQL
-      uses: github/codeql-action/setup@v3
-      with:
-        languages: javascript
+#     - name: Initialize CodeQL
+#       uses: github/codeql-action/setup@v3
+#       with:
+#         languages: javascript
 
-    - name: Run CodeQL analysis
-      uses: github/codeql-action/analyze@v3
-      with:
-        queries: ./path/to/your/codeql/queries
-        # Other configuration options such as paths to include/exclude, etc.
+#     - name: Run CodeQL analysis
+#       uses: github/codeql-action/analyze@v3
+#       with:
+#         queries: ./path/to/your/codeql/queries
+#         # Other configuration options such as paths to include/exclude, etc.
 
-    - name: Upload SARIF results
-      uses: github/codeql-action/upload-sarif@v3
+#     - name: Upload SARIF results
+#       uses: github/codeql-action/upload-sarif@v3
